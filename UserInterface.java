@@ -8,6 +8,7 @@ public class UserInterface {
     private final Player computer;
 
     public UserInterface () {
+        // this.scanner = new Scanner(System.in);
         this.human = new Player("Human");
         this.computer = new Player("Computer");
     }
