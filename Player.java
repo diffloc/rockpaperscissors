@@ -1,5 +1,7 @@
 package rockpaperscissors;
 
+import java.util.Random;
+
 public class Player {
 
     private final String name;
@@ -17,11 +19,10 @@ public class Player {
         this.gesture = gesture;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void generateComputerOption(Player human) {
-        this.gesture = human.gesture.getOpposite();
+    public void generateComputerGesture() {
+        Random random = new Random();
+        this.gesture = Gesture.values()[random.nextInt(3)];
     }
 }

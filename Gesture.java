@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum Gesture {
-
     ROCK, PAPER, SCISSORS;
 
     private static final Map<Gesture, Gesture> OPPOSITES = new HashMap<>();
@@ -18,7 +17,8 @@ public enum Gesture {
         return OPPOSITES.get(this);
     }
 
-    public static String getAvailableOptions() {
+
+    public static String getAvailableGestures() {
         StringBuilder sb = new StringBuilder();
         Gesture[] gestures = Gesture.values();
         for (int i = 0; i < gestures.length; i++) {
