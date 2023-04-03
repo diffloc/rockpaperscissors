@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class Player {
 
-    private final String name;
+    private String name;
     private Gesture gesture;
+    private int score;
 
-    public Player(String name) {
-        this.name = name;
+    public Player() {
+
+        // this.name = name;
     }
 
     public Gesture getGesture() {
@@ -19,7 +21,25 @@ public class Player {
         this.gesture = gesture;
     }
 
-    public String getName() { return name; }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+
+        return this.name; }
+
+    public int getScore() {
+        return this.score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void addScore(int points) {
+        this.score += points;
+    }
 
     public void generateComputerGesture() {
         Random random = new Random();
