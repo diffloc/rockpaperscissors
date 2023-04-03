@@ -5,19 +5,18 @@ import java.util.Random;
 public class Player {
 
     private String name;
-    private Gesture gesture;
+    private String gesture;
     private int score;
 
     public Player() {
-
-        // this.name = name;
+        this.score = 0;
     }
 
-    public Gesture getGesture() {
+    public String getGesture() {
         return this.gesture;
     }
 
-    public void setGesture(Gesture gesture) {
+    public void setGesture(String gesture) {
         this.gesture = gesture;
     }
 
@@ -41,8 +40,9 @@ public class Player {
         this.score += points;
     }
 
-    public void generateComputerGesture() {
+    public void generateComputerGesture(String[] gestures) {
         Random random = new Random();
-        this.gesture = Gesture.values()[random.nextInt(3)];
+        this.gesture = gestures[random.nextInt(gestures.length)];
+        // this.gesture = Gesture.values()[random.nextInt(3)];
     }
 }
